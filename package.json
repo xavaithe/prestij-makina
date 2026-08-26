@@ -1,0 +1,14 @@
+{
+  "name": "prestij-makina-local",
+  "version": "1.0.0",
+  "description": "Prestij Makina web sitesi yerel kopyası ve Yapay Zeka Destekli Müşteri Asistanı",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  }
+}

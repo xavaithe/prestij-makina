@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestij Makina - Yönetim Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-box">
+      <div class="login-logo">
+        <div class="logo-badge">P</div>
+        <h1>Prestij Makina</h1>
+        <p>Yönetim & AI Veri Paneli</p>
+      </div>
+      <form id="login-form">
+        <div class="form-group">
+          <label>Kullanıcı Adı</label>
+          <input type="text" id="login-username" class="form-control" required autocomplete="username" placeholder="admin">
+        </div>
+        <div class="form-group">
+          <label>Şifre</label>
+          <input type="password" id="login-password" class="form-control" required autocomplete="current-password" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn-primary">
+          <i class="fa-solid fa-right-to-bracket"></i> Güvenli Giriş Yap
+        </button>
+        <p class="login-error" id="login-error"></p>
+      </form>
+      <a href="/" class="back-link"><i class="fa-solid fa-arrow-left"></i> Ana Siteye Dön</a>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard Layout -->
+  <div class="admin-layout" id="admin-layout" style="display: none;">
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <div class="logo-badge">P</div>
+        <div>
+          <strong>Prestij Admin</strong>
+          <span class="sidebar-version">v2.6 Slider & Firestore</span>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-group-title">SİTE & İÇERİK</div>
+        <button class="nav-item active" data-section="site"><i class="fa-solid fa-globe"></i> Genel Ayarlar</button>
+        <button class="nav-item" data-section="topBar"><i class="fa-solid fa-bars"></i> Üst Bar & Tel</button>
+        <button class="nav-item" data-section="brand"><i class="fa-solid fa-building"></i> Marka & Menü</button>
+        <button class="nav-item" data-section="hero"><i class="fa-solid fa-sliders"></i> Hero Banner & Slider</button>
+        <button class="nav-item" data-section="catalog"><i class="fa-solid fa-file-pdf"></i> e-Katalog PDF Yönetimi</button>
+        <button class="nav-item" data-section="stats"><i class="fa-solid fa-chart-simple"></i> Sayısal İstatistikler</button>
+        <button class="nav-item" data-section="aboutCorporate"><i class="fa-solid fa-industry"></i> Hakkımızda (Kurumsal)</button>
+        <button class="nav-item" data-section="productsSection"><i class="fa-solid fa-layer-group"></i> Ürün Başlıkları</button>
+        <button class="nav-item" data-section="productCategories"><i class="fa-solid fa-tags"></i> Ürün Kategorileri</button>
+        <button class="nav-item" data-section="products"><i class="fa-solid fa-cube"></i> Ürün Kataloğu</button>
+        <button class="nav-item" data-section="about"><i class="fa-solid fa-gears"></i> Merkezi Yıkama</button>
+        <button class="nav-item" data-section="referencesSection"><i class="fa-solid fa-gas-pump"></i> Referanslarımız</button>
+        
+        <div class="nav-group-title">YAPAY ZEKA & İLETİŞİM</div>
+        <button class="nav-item" data-section="aiChat"><i class="fa-solid fa-robot"></i> AI Asistan Ayarları</button>
+        <button class="nav-item" data-section="faqs"><i class="fa-solid fa-brain"></i> AI Bot Soru & Cevaplar</button>
+        <button class="nav-item" data-section="quoteForm"><i class="fa-solid fa-file-invoice"></i> Teklif Formu</button>
+        
+        <div class="nav-group-title">SİSTEM & BULUT</div>
+        <button class="nav-item" data-section="firebase"><i class="fa-solid fa-fire"></i> Firebase & Firestore</button>
+        <button class="nav-item" data-section="companyInfo"><i class="fa-solid fa-address-card"></i> Şirket Künyesi</button>
+        <button class="nav-item" data-section="footer"><i class="fa-solid fa-shoe-prints"></i> Footer</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" target="_blank" class="btn-outline-sm"><i class="fa-solid fa-external-link"></i> Siteyi Aç</a>
+        <button class="btn-logout" id="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Çıkış</button>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <!-- Admin Top Navigation Bar -->
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <h2 id="section-title">Site Ayarları</h2>
+          <span class="fb-badge-status" id="fb-topbar-status"><i class="fa-solid fa-circle"></i> Yerel Mod</span>
+        </div>
+        <div class="topbar-actions">
+          <span class="save-status" id="save-status"></span>
+          <button class="btn-save" id="btn-save-section"><i class="fa-solid fa-floppy-disk"></i> Bölümü Kaydet</button>
+          <button class="btn-save-all" id="btn-save-all"><i class="fa-solid fa-cloud-arrow-up"></i> Tümünü Kaydet</button>
+        </div>
+      </header>
+
+      <!-- Dashboard Quick Metrics Strip -->
+      <div class="dashboard-stats-strip">
+        <div class="dash-card">
+          <div class="dash-icon bg-red"><i class="fa-solid fa-box"></i></div>
+          <div class="dash-data">
+            <span class="dash-count" id="dash-prod-count">0</span>
+            <span class="dash-lbl">Kayıtlı Ürün</span>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-icon bg-purple"><i class="fa-solid fa-brain"></i></div>
+          <div class="dash-data">
+            <span class="dash-count" id="dash-faq-count">0</span>
+            <span class="dash-lbl">AI Bot Q&A Kuralı</span>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-icon bg-blue"><i class="fa-solid fa-gas-pump"></i></div>
+          <div class="dash-data">
+            <span class="dash-count" id="dash-ref-count">0</span>
+            <span class="dash-lbl">İstasyon Referansı</span>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-icon bg-orange" id="dash-fb-icon"><i class="fa-solid fa-fire"></i></div>
+          <div class="dash-data">
+            <span class="dash-count" id="dash-fb-status">Pasif</span>
+            <span class="dash-lbl">Firebase Senkronizasyon</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dynamic Form Content Area -->
+      <div class="admin-content" id="admin-content">
+        <!-- Dynamic forms rendered here via admin.js -->
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- Firebase & Firestore Compatibility SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
