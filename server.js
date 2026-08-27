@@ -112,6 +112,7 @@ app.patch('/api/admin/content/:section', authMiddleware, async (req, res) => {
 
 // Admin panel static files
 app.use('/admin', express.static(path.join(__dirname, 'admin')));
+app.use('/upload', express.static(path.join(__dirname, 'assets', 'upload')));
 
 // Public site static files (after API routes)
 app.use(express.static(__dirname));

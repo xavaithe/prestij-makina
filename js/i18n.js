@@ -9,7 +9,7 @@ export const translations = {
     // Top Bar & Header
     topPhoneText: "+90 332 237 80 00",
     topEmailText: "info@prestijmakina.com.tr",
-    topLocationText: "Konya Organize Sanayi Bölgesi",
+    topLocationText: "Fevzi Çakmak Mah. 10753. Sokak 46/A Konya / TÜRKİYE",
     catalogBtnText: "e-Katalog İndir",
     brandTitle: "PRESTİJ",
     brandSubtitle: "MAKİNA SANAYİ",
@@ -22,19 +22,19 @@ export const translations = {
     aiHeaderBtn: "Yapay Zeka Asistanı",
 
     // Hero Section
-    heroTag: "2003'ten Beri Güven ve Kalite",
-    heroTitle: "Endüstriyel Yıkama & <span>Self-Servis</span> Otomat Sistemleri",
-    heroDesc: "Akaryakıt istasyonları ve yıkama tesisleri için yüksek basınçlı jetonlu oto yıkama makineleri, köpük sistemleri ve 360° Z-Boom tavan pervaneleri üretimi.",
+    heroTag: "Sektörün Öncüsü",
+    heroTitle: "Yüksek Kalite Endüstriyel Yıkama Çözümleri",
+    heroDesc: "2003'ten bugüne yerli imalat gücümüzle akaryakıt istasyonları ve yıkama tesisleri için anahtar teslim sistemler.",
     heroBtn1: "Ürünlerimizi İnceleyin",
     heroBtn2: "AI Asistana Soru Sor",
 
     // Stats Strip
-    stat1Number: "1500+",
-    stat1Label: "Donatılan Petrol İstasyonu",
-    stat2Number: "50+",
-    stat2Label: "Ürün ve Model Çeşidi",
-    stat3Number: "10.000+",
-    stat3Label: "Memnun Müşteri",
+    stat1Number: "755+",
+    stat1Label: "Petrol İstasyonu",
+    stat2Number: "12.784+",
+    stat2Label: "Üretilen Ürün & Otomat",
+    stat3Number: "1.633+",
+    stat3Label: "Memnun Müşteri & Beğeni",
     stat4Number: "25+",
     stat4Label: "İhracat Yapılan Ülke",
 
@@ -42,15 +42,15 @@ export const translations = {
     aboutCorpSubtitle: "Kurumsal & Üretim Gücü",
     aboutCorpTitle: "2003'ten Günümüze Endüstriyel Yıkama Teknolojileri",
     aboutCorpBadge: "Konya OSB Fabrikamız",
-    aboutCorpDesc: "Prestij Makina San. ve Tic. Ltd. Şti., 2003 yılında Konya Organize Sanayi Bölgesi'nde temelleri atılmış, Türkiye'nin ve bölgenin önde gelen endüstriyel yıkama ekipmanı imalatçıları arasında yer edinmiştir. İlk yerli basınçlı soğuk yıkama makinesini 2004 yılında pazara sunan firmamız, günümüzde akaryakıt istasyonları, filo yıkama tesisleri ve otomat parkları için yüksek teknolojili çözümler sunmaktadır.",
-    aboutCorpHighlight1: "Konya OSB'de 5.000 m² Kapalı İmalat Alanı",
-    aboutCorpHighlight2: "İtalyan Pistonlu Yüksek Basınçlı Seramik Pompalar",
-    aboutCorpHighlight3: "CE Standartlarında Paslanmaz Elektrostatik Çelik Kabinler",
-    aboutCorpHighlight4: "Sahte Para / Jeton Algılamalı Akıllı Sensörler",
-    aboutCorpHighlight5: "2 Yıl Üretici + 10 Yıl Parça Garantisi",
-    aboutCorpHighlight6: "81 İl ve 25+ Ülkeye Yaygın Mobil Servis Avantajı",
+    aboutCorpDesc: "2003 yılında Konya'da kurulan Prestij Makine ilk basınçlı soğuk yıkama makinesi üretimini 2004 yılında yapmıştır. Her zaman müşteri beklentilerinin üzerinde ürün üretme çabasında olan firmamız çalıştığı kurum, kuruluş ve şahıslara en iyi hizmeti vermek, aynı zamanda bu doğrultuda sizleri hedeflediğiniz noktalara taşımak için sürekli gelişen vizyonumuzla ihracatını yaptığımız ülke sayısını da çoğaltmaktadır. Bünyemizde Temassız – fırçasız (Full Otomatik) yıkama sistemleri, Merkezi yıkama ve köpük sistemleri, yıkama tonozları, süpürge makineleri, soğuk ve sıcak – soğuk yıkama makineleri üretimi devam etmektedir.",
+    aboutCorpHighlight1: "2003 Yılından Beri Konya'da Yerli Üretim Gücü",
+    aboutCorpHighlight2: "İtalyan Seramik Pistonlu Yüksek Basınçlı Pompalar",
+    aboutCorpHighlight3: "Paslanmaz Çelik ve Elektrostatik Toz Boyalı Gövde",
+    aboutCorpHighlight4: "Sahte Para / Jeton Tanıma Özellikli Elektronik Mekanizma",
+    aboutCorpHighlight5: "Temassız – Fırçasız Full Otomatik Yıkama Çözümleri",
+    aboutCorpHighlight6: "Türkiye Geneli 81 İl ve 25+ Ülkeye İhracat Ağı",
     aboutCorpMissionTitle: "Misyonumuz:",
-    aboutCorpMission: "Yüksek mühendislik kalitesini yerli imalat gücüyle birleştirerek akaryakıt istasyonlarında sıfır arıza ve yüksek gelir sağlayan oto yıkama sistemleri üretmek.",
+    aboutCorpMission: "Türkiye ve birçok ülkede dağıtım ağı, satış sonrası keşif ekibi ve satış sonrası servis destek hizmeti ile doğru ürünü, doğru noktaya, zamanında ulaştırmayı ve sürekli verimli kullanımı sağlamak.",
     aboutCorpYears: "Yıllık Fabrika Tecrübesi",
 
     // Products Section
@@ -65,12 +65,12 @@ export const translations = {
     // Central Wash Section
     aboutCentralSubtitle: "Projelendirme & Mühendislik",
     aboutCentralTitle: "Merkezi Yıkama Sistemleri & Otomasyon",
-    aboutCentralDesc: "Akaryakıt istasyonları için 2 ila 12 peronlu **Merkezi Yıkama ve Yoğun Köpük Sistemleri** kurmaktayız. Tüm teknik ekipman tek odada toplanarak gürültü önlenir, gelir uzaktan izlenebilir.",
-    aboutCentralFeature1: "Tek teknik odadan gürültüsüz ve temiz peron yönetimi",
-    aboutCentralFeature2: "İtalyan seramik pistonlu yüksek basınçlı pompalar",
-    aboutCentralFeature3: "Sahte para algılamalı elektronik jeton / kart mekanizmaları",
-    aboutCentralFeature4: "2 Yıl Tam Garanti ve 10 Yıl Yedek Parça Temin Desteği",
-    aboutCentralBtn: "AI Asistanı ile Projenizi Değerlendirin",
+    aboutCentralDesc: "Sistemde kullanılacak pompa-motorlar, su tankı, köpük ünitesi ve elektrik panosu yapılacak makine dairesi içine montaj edilir. Makine dairesinden her perona birbirinden bağımsız olacak şekilde basınç ve köpük hatları çekilir. Bir peronda oluşabilecek bir arıza diğer peronları etkilemez. Yıkama peronunda sadece para atma kutuları ve 360 derece dönen Z-Boom pervaneler yer alır.",
+    aboutCentralFeature1: "Pompalar, su tankı ve köpük ünitesi kapalı makine dairesinde toplanır",
+    aboutCentralFeature2: "Her perona bağımsız basınç ve köpük hattı ile kesintisiz çalışma",
+    aboutCentralFeature3: "Kış aylarında donmayı önleyen hava tahliye sistemi",
+    aboutCentralFeature4: "Elektronik numaratör ile dijital zaman, birim fiyat ve gelir takibi",
+    aboutCentralBtn: "Merkezi Sistem Projesi Hakkında Bilgi Alın",
 
     // References Section
     refSubtitle: "Güçlü İş Ortaklıklarımız",
@@ -79,13 +79,13 @@ export const translations = {
     refTestimonialsTitle: "İstasyon İşletmecilerimiz Ne Diyor?",
 
     // Footer Section
-    footerDesc: "Müşteri memnuniyetinin bizim işimiz olduğu bilinciyle endüstriyel oto yıkama ve süpürge makineleri üretiyoruz.",
+    footerDesc: "“Müşteri memnuniyetinin bizim işimiz olduğu” bilinciyle işimizi severek ve iyi yapmaya çalışıyoruz.",
     footerQuickTitle: "Hızlı Menü",
     footerProductsTitle: "Ürün Grupları",
     footerContactTitle: "İletişim & Çalışma",
     footerWeekdays: "Hafta İçi: 08:00 - 18:00",
     footerSaturday: "Cumartesi: 08:00 - 15:00",
-    footerCopyright: "Copyright © 2026 PRESTİJ MAKİNA. Tüm Hakları Saklıdır. | Entegre AI Asistan & Firebase Sürümü",
+    footerCopyright: "Copyright © 2026 PRESTİJ MAKİNA. Tüm Hakları Saklıdır.",
 
     // Quote Modal
     quoteTitle: "📋 Hızlı Fiyat Teklifi Formu",
@@ -362,6 +362,21 @@ export const categoryTranslations = {
     en: "Industrial Vacuums",
     sq: "Fshesa Industriale"
   },
+  'kopuk-tanklari': {
+    tr: "Köpük Tankları",
+    en: "Foam Tanks",
+    sq: "Rezervuarë Shkume"
+  },
+  'yedek-parcalar': {
+    tr: "Yedek Parçalar",
+    en: "Spare Parts",
+    sq: "Pjesë Këmbimi"
+  },
+  'diger-urunler': {
+    tr: "Diğer Ürünler",
+    en: "Other Products",
+    sq: "Produkte të Tjera"
+  },
   'merkezi-yikama-sistemleri': {
     tr: "Merkezi Yıkama & Yıkama Tonozları",
     en: "Central Wash & Touchless Vaults",
@@ -371,76 +386,172 @@ export const categoryTranslations = {
 
 // Product Translations Mapping
 export const productTranslations = {
-  'kombi-dual-250': {
+  'patm-131-kombi': {
     en: {
-      name: "Prestij Kombi Dual 250 Bar (Coin Foam + Washer)",
-      desc: "Prestij Kombi Dual 250 is a 2-in-1 combo foam and pressure wash vending machine designed for maximum station profitability.",
-      usageArea: "Gas stations, self-service car wash parks, detailing shops"
+      name: "Jetonlu - Paralı Köpük ve Yıkama Makinesi (2'si 1 Arada) PATM 131",
+      desc: "Combo foam and high pressure wash vending machine designed for maximum gas station profitability.",
+      usageArea: "Gas stations, self-service car wash parks"
     },
     sq: {
-      name: "Prestij Kombi Dual 250 Bar (Larje + Shkumë me Zhetona)",
-      desc: "Prestij Kombi Dual 250 është një makinë automatike 2-në-1 e projektuar për të fituar maksimumin në hapësirë minimale.",
-      usageArea: "Pika karburanti, parqe larjeje vetë-shërbim, servise auto"
+      name: "Makinë Larje & Shkumë me Zhetona (2 në 1) PATM 131",
+      desc: "Makinë automatike 2-në-1 e projektuar për të fituar maksimumin në hapësirë minimale.",
+      usageArea: "Pika karburanti, parqe larjeje vetë-shërbim"
     }
   },
-  'twin-vac-3000': {
+  'patm-120-kombi': {
     en: {
-      name: "Prestij Twin-Vac 3000 Dual Motor Coin Vacuum",
-      desc: "High suction dual motor coin-operated vacuum cleaner for detailed interior vehicle cleaning.",
-      usageArea: "Station vacuum areas, car detailing centers, self-service car parks"
+      name: "Jetonlu - Paralı Köpük ve Yıkama Makinesi PATM 120",
+      desc: "Compact coin-operated foam and wash machine for fuel stations.",
+      usageArea: "Station wash bays, car wash shops"
     },
     sq: {
-      name: "Prestij Twin-Vac 3000 Fshesë me Zhetona me Dy Motorrë",
-      desc: "Fshesë me korrent me zhetona me dy motorrë dhe fuqi të lartë thithëse për pastrimin e brendshëm të automjeteve.",
-      usageArea: "Zonat e fshesave në pika karburanti, servise pastrimi auto"
+      name: "Makinë Larje & Shkumë me Zhetona PATM 120",
+      desc: "Makinë kompakte me zhetona për larje dhe shkumë.",
+      usageArea: "Pista larjeje, servise auto"
     }
   },
-  'hot-power-200': {
+  'patm-132-vakum-hava': {
     en: {
-      name: "Prestij Hot-Power 200 Bar Hot-Cold Pressure Washer",
-      desc: "Industrial hot-cold pressure washer capable of generating 140°C hot water against stubborn grease and dirt.",
-      usageArea: "Heavy vehicle wash bays, municipalities, food processing plants"
+      name: "Vakummatik + Hava Matik PATM 132",
+      desc: "Multi-purpose station vending unit combining interior vacuuming with tire inflator air gun.",
+      usageArea: "Gas stations, auto detailing"
     },
     sq: {
-      name: "Prestij Hot-Power 200 Bar Larëse me Presion Ujë i Nxehtë-Ftohtë",
-      desc: "Makinë industriale larjeje me presion që prodhon ujë të nxehtë deri në 140°C kundër yndyrave të forta.",
-      usageArea: "Lariqe mjetesh të rënda, bashki, fabrika ushqimore"
+      name: "Vakummatik + Hava Matik PATM 132",
+      desc: "Njësi e kombinuar fshesë thithëse me zhetona dhe pistoletë ajri për goma.",
+      usageArea: "Pika karburanti, servise auto"
     }
   },
-  'boom-360-z': {
+  'patm-126-vakummatik': {
     en: {
-      name: "Prestij 360° Stainless Z-Boom Ceiling Swivel",
-      desc: "Aesthetic and long-lasting stainless ceiling swivel arm that eliminates hose entanglement during washing.",
-      usageArea: "Car wash bays, station washing areas, covered wash sites"
+      name: "VAKUMMATİK PATM 126 Coin Vacuum",
+      desc: "Large stainless chrome tank, high suction power vacuum cleaner for gas stations.",
+      usageArea: "Station vacuum areas, self-service car parks"
     },
     sq: {
-      name: "Prestij 360° Krah Rrotullues Tavan me Inoks Z-Boom",
-      desc: "Krah rrotullues tavan prej inoksi që eliminon ngatërrimin e zorrës gjatë larjes së makinës.",
-      usageArea: "Pista larjeje, zona larjeje në pika karburanti"
+      name: "VAKUMMATİK PATM 126 Fshesë me Zhetona",
+      desc: "Fshesë me zhetona me kazan inoksi dhe fuqi të lartë thithëse.",
+      usageArea: "Zonat e fshesave në pika karburanti"
     }
   },
-  'merkezi-yikama-otomasyonu': {
+  'patm-113-vakummatik-boyali': {
     en: {
-      name: "Prestij 2-12 Bay Central Wash & Foam System",
-      desc: "The most professional, low-maintenance, and high-efficiency central wash solution for multi-bay stations.",
-      usageArea: "Large fuel stations, self-service wash parks, fleet wash centers"
+      name: "Vakummatik (Painted, Tall Cabinet) PATM 113",
+      desc: "Heavy-duty outdoor electrostatic powder-coated coin vacuum.",
+      usageArea: "Outdoor gas station bays, car wash sites"
     },
     sq: {
-      name: "Prestij Sistem Larje Qendrore & Shkumë 2-12 Pista",
-      desc: "Zgjidhja më profesionale, me kosto të ulët mirëmbajtjeje për pikat e karburantit me shumë pista.",
-      usageArea: "Pika të mëdha karburanti, parqe larjeje vetë-shërbim"
+      name: "Vakummatik (E Lyer, Kabinë e Gjatë) PATM 113",
+      desc: "Fshesë me zhetona për kushte të vështira të jashtme atmosferike.",
+      usageArea: "Pista të jashtme larjeje"
     }
   },
-  'touchless-tonoz-robot': {
+  'patm-123-kopukmatik': {
     en: {
-      name: "Prestij Touchless Automatic Robotic Wash Vault",
-      desc: "Robotic system that washes vehicles in 3 minutes without brushes using high pressure water jets and chassis wash.",
-      usageArea: "Modern gas stations, shopping mall wash areas, premium auto spas"
+      name: "KÖPÜKMATİK PATM 123 Coin Foam Machine",
+      desc: "High density snow foam generator with coin and digital timer mechanism.",
+      usageArea: "Self-service foam bays, car wash facilities"
     },
     sq: {
-      name: "Prestij Roboti Automatik i Larjes pa Furça (Tonoz)",
-      desc: "Sistem robotik që lën makinën në 3 minuta pa përdorur furça përmes currilave të ujit me presion të lartë.",
-      usageArea: "Pika moderne karburanti, qendra tregtare, servise premium"
+      name: "KÖPÜKMATİK PATM 123 Makinë Shkume me Zhetona",
+      desc: "Gjenerues shkume intensive me zhetona dhe kohëmatës dixhital.",
+      usageArea: "Pista larjeje me vetë-shërbim"
+    }
+  },
+  'patm-125-yikamatik': {
+    en: {
+      name: "YIKAMATİK PATM 125 Coin Pressure Washer",
+      desc: "200-250 Bar pressure cold water coin-operated washer with Italian ceramic pump.",
+      usageArea: "Gas stations, self-service wash bays"
+    },
+    sq: {
+      name: "YIKAMATİK PATM 125 Makinë Larje me Presion me Zhetona",
+      desc: "Larëse me presion 200-250 bar me pompë keramike italiane.",
+      usageArea: "Pika karburanti, pista larjeje"
+    }
+  },
+  'cw-soguk-yikama': {
+    en: {
+      name: "High Pressure Cold Washer CW",
+      desc: "Industrial electric cold pressure washer for continuous heavy-duty operation.",
+      usageArea: "Car detailing, factories, construction sites"
+    },
+    sq: {
+      name: "Larëse me Presion Ujë i Ftohtë CW",
+      desc: "Makinë larjeje industriale me ujë të ftohtë me presion të lartë.",
+      usageArea: "Servise larjeje, fabrika, kantiere"
+    }
+  },
+  'hw-sicak-soguk-yikama': {
+    en: {
+      name: "High Pressure Hot & Cold Washer HW",
+      desc: "Diesel burner pressure washer generating 30-140°C hot water and steam for heavy grease and machinery.",
+      usageArea: "Heavy machinery, trucks, municipal cleaning, industrial plants"
+    },
+    sq: {
+      name: "Larëse me Presion Ujë i Nxehtë-Ftohtë HW",
+      desc: "Makinë larjeje me presion me djegës nafte që prodhon ujë të nxehtë 30-140°C.",
+      usageArea: "Kamionë, mjete të rënda, fabrika"
+    }
+  },
+  'endustriyel-3-motorlu-supurge': {
+    en: {
+      name: "3-Motor Wet-Dry Industrial Vacuum",
+      desc: "3600W powerful suction and 80L stainless steel tank for professional cleaning.",
+      usageArea: "Car detailing, factories, textile, hotels"
+    },
+    sq: {
+      name: "Fshesë Industriale me 3 Motorrë Lagësht-Thatë",
+      desc: "Fshesë profesionale 3600W me kazan inoksi 80 litra.",
+      usageArea: "Pastrim profesional auto, fabrika, hotele"
+    }
+  },
+  'kopuk-tanki-90lt': {
+    en: {
+      name: "90 Liters Stainless Chrome Foam Tank",
+      desc: "Pneumatic air-powered snow foam spray tank with safety regulator.",
+      usageArea: "Car wash stations, auto spas"
+    },
+    sq: {
+      name: "Rezervuar Shkume 90 Litra Inoks",
+      desc: "Rezervuar shkume pneumatik me rregullator presioni.",
+      usageArea: "Stacione larjeje auto"
+    }
+  },
+  'boom-360-pervane': {
+    en: {
+      name: "360° Stainless Ceiling Z-Boom Swivel",
+      desc: "Ceiling mounted rotating boom that prevents hose wear and car paint scratching.",
+      usageArea: "Gas station wash bays, indoor car wash centers"
+    },
+    sq: {
+      name: "Krah Rrotullues Tavan 360° Inoks Z-Boom",
+      desc: "Krah rrotullues tavan prej inoksi që mbron zorrën dhe bojën e makinës.",
+      usageArea: "Pista larjeje në pika karburanti"
+    }
+  },
+  'paramatik-otomat': {
+    en: {
+      name: "Paramatik Smart Change & Token Dispenser",
+      desc: "Automated machine accepting paper banknotes and dispensing coins or tokens instantly.",
+      usageArea: "Gas stations, self-service vending parks"
+    },
+    sq: {
+      name: "Paramatik Automat Këmbimi të Parave & Zhetonave",
+      desc: "Automat inteligjent që pranon kartëmonedha dhe jep monedha ose zhetona.",
+      usageArea: "Pika karburanti, zona vetë-shërbim"
+    }
+  },
+  'pompa-200-bar': {
+    en: {
+      name: "200 Bar High Pressure Pump & By-Pass",
+      desc: "Italian ceramic piston heavy duty high pressure replacement pump.",
+      usageArea: "Car wash machines, central washing plants"
+    },
+    sq: {
+      name: "Pompë me Presion të Lartë 200 Bar & By-Pass",
+      desc: "Pompë origjinale italiane me pistona keramikë me presion të lartë.",
+      usageArea: "Makina larjeje, impiante qendrore"
     }
   }
 };

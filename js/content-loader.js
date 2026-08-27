@@ -54,9 +54,8 @@ export function applySiteContent(content, lang = getCurrentLang()) {
   setText('[data-content="catalog-btn"]', t('catalogBtnText', lang));
 
   // 2. Brand Header & Navigation
-  setText('[data-content="brand-badge"]', c.brand?.badge || 'P');
-  setText('[data-content="brand-title"]', t('brandTitle', lang));
-  setText('[data-content="brand-subtitle"]', t('brandSubtitle', lang));
+  if (c.brand?.logo) setAttr('[data-content="brand-logo-img"]', 'src', c.brand.logo);
+  if (c.brand?.logoWhite) setAttr('[data-content="footer-logo-img"]', 'src', c.brand.logoWhite);
 
   renderNavigation(c.navigation, lang);
 
@@ -75,11 +74,11 @@ export function applySiteContent(content, lang = getCurrentLang()) {
 
   // 7. Central Wash Automation Section
   if (c.about?.image) setAttr('[data-content="about-image"]', 'src', c.about.image);
-  setText('[data-content="about-subtitle"]', t('aboutCentralSubtitle', lang));
-  setText('[data-content="about-title"]', t('aboutCentralTitle', lang));
-  setHtml('[data-content="about-desc"]', formatMarkdown(t('aboutCentralDesc', lang)));
+  setText('[data-content="about-subtitle"]', lang === 'tr' && c.about?.subtitle ? c.about.subtitle : t('aboutCentralSubtitle', lang));
+  setText('[data-content="about-title"]', lang === 'tr' && c.about?.title ? c.about.title : t('aboutCentralTitle', lang));
+  setHtml('[data-content="about-desc"]', formatMarkdown(lang === 'tr' && c.about?.description ? c.about.description : t('aboutCentralDesc', lang)));
   renderCentralWashFeatures(c.about?.features, lang);
-  setText('[data-content="about-btn"]', t('aboutCentralBtn', lang));
+  setText('[data-content="about-btn"]', lang === 'tr' && c.about?.buttonText ? c.about.buttonText : t('aboutCentralBtn', lang));
 
   // 8. References Section
   renderReferences(c.referencesSection, lang);
@@ -182,7 +181,7 @@ export function renderHeroSlider(c, lang = getCurrentLang()) {
       tag: t('heroTag', lang),
       title: t('heroTitle', lang),
       description: t('heroDesc', lang),
-      backgroundImage: c.hero?.backgroundImage || 'assets/images/hero_banner.png',
+      backgroundImage: c.hero?.backgroundImage || 'assets/upload/slider/1778135979_25974634.jpeg',
       primaryButtonText: t('heroBtn1', lang),
       primaryButtonLink: '#urunler',
       secondaryButtonText: t('heroBtn2', lang)
@@ -190,7 +189,7 @@ export function renderHeroSlider(c, lang = getCurrentLang()) {
   ];
 
   let slidesHtml = slides.map((slide, index) => {
-    const bg = slide.backgroundImage || 'assets/images/hero_banner.png';
+    const bg = slide.backgroundImage || 'assets/upload/slider/1778135979_25974634.jpeg';
     const tag = lang === 'tr' ? (slide.tag || t('heroTag', lang)) : t('heroTag', lang);
     const title = lang === 'tr' ? (slide.title || t('heroTitle', lang)) : t('heroTitle', lang);
     const desc = lang === 'tr' ? (slide.description || t('heroDesc', lang)) : t('heroDesc', lang);
@@ -234,14 +233,14 @@ function renderStats(stats, lang) {
   const strip = document.getElementById('stats-strip');
   if (!strip) return;
 
-  const defaultStats = [
+  const statsList = (stats && stats.length > 0) ? stats : [
     { number: t('stat1Number', lang), label: t('stat1Label', lang) },
     { number: t('stat2Number', lang), label: t('stat2Label', lang) },
     { number: t('stat3Number', lang), label: t('stat3Label', lang) },
     { number: t('stat4Number', lang), label: t('stat4Label', lang) }
   ];
 
-  strip.innerHTML = defaultStats.map(s => `
+  strip.innerHTML = statsList.map(s => `
     <div class="stat-item">
       <div class="stat-number">${s.number}</div>
       <div class="stat-label">${s.label}</div>
@@ -250,18 +249,18 @@ function renderStats(stats, lang) {
 }
 
 function renderCorporateAbout(corp, lang) {
-  setText('[data-content="about-corp-subtitle"]', t('aboutCorpSubtitle', lang));
-  setText('[data-content="about-corp-title"]', t('aboutCorpTitle', lang));
-  setHtml('[data-content="about-corp-badge"]', `<i class="fa-solid fa-industry"></i> ${t('aboutCorpBadge', lang)}`);
-  setText('[data-content="about-corp-desc"]', t('aboutCorpDesc', lang));
+  setText('[data-content="about-corp-subtitle"]', lang === 'tr' && corp?.subtitle ? corp.subtitle : t('aboutCorpSubtitle', lang));
+  setText('[data-content="about-corp-title"]', lang === 'tr' && corp?.title ? corp.title : t('aboutCorpTitle', lang));
+  setHtml('[data-content="about-corp-badge"]', `<i class="fa-solid fa-industry"></i> ${lang === 'tr' && corp?.badgeText ? corp.badgeText : t('aboutCorpBadge', lang)}`);
+  setText('[data-content="about-corp-desc"]', lang === 'tr' && corp?.description ? corp.description : t('aboutCorpDesc', lang));
   setHtml('[data-content="about-corp-mission-title"]', `<i class="fa-solid fa-bullseye"></i> ${t('aboutCorpMissionTitle', lang)}`);
-  setText('[data-content="about-corp-mission"]', t('aboutCorpMission', lang));
+  setText('[data-content="about-corp-mission"]', lang === 'tr' && corp?.mission ? corp.mission : t('aboutCorpMission', lang));
   setText('[data-content="about-corp-years"]', t('aboutCorpYears', lang));
   if (corp?.image) setAttr('[data-content="about-corp-image"]', 'src', corp.image);
 
   const highlightsList = document.getElementById('about-corp-highlights');
   if (highlightsList) {
-    const highlights = [
+    const highlights = (lang === 'tr' && corp?.highlights && corp.highlights.length > 0) ? corp.highlights : [
       t('aboutCorpHighlight1', lang),
       t('aboutCorpHighlight2', lang),
       t('aboutCorpHighlight3', lang),
@@ -276,7 +275,7 @@ function renderCorporateAbout(corp, lang) {
 function renderCentralWashFeatures(features, lang) {
   const list = document.getElementById('about-features');
   if (!list) return;
-  const defaultFeatures = [
+  const defaultFeatures = (lang === 'tr' && features && features.length > 0) ? features : [
     t('aboutCentralFeature1', lang),
     t('aboutCentralFeature2', lang),
     t('aboutCentralFeature3', lang),
@@ -288,22 +287,20 @@ function renderCentralWashFeatures(features, lang) {
 }
 
 function renderReferences(ref, lang) {
-  setText('[data-content="ref-subtitle"]', t('refSubtitle', lang));
-  setText('[data-content="ref-title"]', t('refTitle', lang));
-  setText('[data-content="ref-desc"]', t('refDesc', lang));
+  setText('[data-content="ref-subtitle"]', lang === 'tr' && ref?.subtitle ? ref.subtitle : t('refSubtitle', lang));
+  setText('[data-content="ref-title"]', lang === 'tr' && ref?.title ? ref.title : t('refTitle', lang));
+  setText('[data-content="ref-desc"]', lang === 'tr' && ref?.description ? ref.description : t('refDesc', lang));
   setText('[data-content="ref-testimonials-title"]', t('refTestimonialsTitle', lang));
 
   const brandsContainer = document.getElementById('references-brands');
   if (brandsContainer) {
     const brands = ref?.brands || [
-      { name: 'Shell', badge: 'Akaryakıt Devleri', desc: '120+ İstasyon Kurulumu' },
-      { name: 'Opet', badge: 'Self Servis Yıkama', desc: '200+ Peron Otomasyonu' },
-      { name: 'Petrol Ofisi', badge: 'Merkezi Sistem', desc: '180+ Tesisat Kurulumu' },
-      { name: 'TP Petrol', badge: 'Jetonlu Otomatlar', desc: '95+ İstasyon Hizmeti' },
-      { name: 'BP', badge: 'Süpürge & Boom', desc: '85+ İstasyon Donanımı' },
-      { name: 'Aytemiz', badge: 'Basınçlı Yıkama', desc: '110+ Tesis Çözümü' },
-      { name: 'Kadoil', badge: 'Robotik Tonoz', desc: '60+ Kurulum' },
-      { name: 'Lukoil', badge: 'Sıcak-Soğuk Yıkama', desc: '45+ İstasyon' }
+      { name: 'BALLIPINAR PETROL', badge: 'AFYON', desc: 'Merkezi Yıkama & Jetonlu Otomatlar' },
+      { name: 'MAVİ BEYAZ AKARYAKIT', badge: 'ANKARA', desc: 'Çoklu Peron Yıkama Sistemi' },
+      { name: 'CANER YILMAZ', badge: 'ARTVİN / YUSUFELİ', desc: 'Yıkamatik & Süpürge' },
+      { name: 'LENA ENERJİ', badge: 'AYDIN', desc: 'Self Servis Yıkama İstasyonu' },
+      { name: 'DAĞKENT PETROL', badge: 'BOLU', desc: 'Kombi Köpük + Yıkama' },
+      { name: 'VARLI PETROL', badge: 'BURSA', desc: 'Merkezi Yıkama & Z-Boom' }
     ];
 
     brandsContainer.innerHTML = brands.map(b => {
@@ -323,7 +320,7 @@ function renderReferences(ref, lang) {
 
   const testimonialsContainer = document.getElementById('references-testimonials');
   if (testimonialsContainer) {
-    const defaultTestimonials = referenceTranslations.testimonials.map(item => item[lang] || item.tr);
+    const defaultTestimonials = (ref?.testimonials && ref.testimonials.length > 0) ? ref.testimonials : referenceTranslations.testimonials.map(item => item[lang] || item.tr);
 
     testimonialsContainer.innerHTML = defaultTestimonials.map(t => `
       <div class="testimonial-card">

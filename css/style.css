@@ -155,8 +155,28 @@ body {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
+}
+
+.main-logo-img {
+  height: 52px;
+  max-width: 190px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.brand-logo:hover .main-logo-img {
+  transform: scale(1.03);
+}
+
+.footer-logo-img {
+  height: 46px;
+  max-width: 180px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+  display: block;
 }
 
 .logo-badge {

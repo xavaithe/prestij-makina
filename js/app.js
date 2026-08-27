@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     productsGrid.innerHTML = filtered.map(product => {
-      const imageSrc = product.image || 'assets/images/foam_machine.png';
+      const imageSrc = product.image || 'assets/upload/product/1562162819_16097754.jpg';
       const askBtnText = t('askAiBtn', lang);
       const motorLbl = t('specMotorLabel', lang);
       const usageLbl = t('specUsageLabel', lang);
