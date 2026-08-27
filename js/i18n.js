@@ -325,6 +325,194 @@ export const translations = {
   }
 };
 
+// Slide Translations Mapping (Hero Slider All Slides)
+export const slideTranslations = {
+  'slide-1': {
+    tr: {
+      tag: "Sektörün Öncüsü",
+      title: "Yüksek Kalite Endüstriyel Yıkama Çözümleri",
+      desc: "2003'ten bugüne yerli imalat gücümüzle akaryakıt istasyonları ve yıkama tesisleri için anahtar teslim sistemler.",
+      btn1: "Ürünlerimizi İnceleyin",
+      btn2: "AI Asistana Soru Sor"
+    },
+    en: {
+      tag: "Industry Leader Since 2003",
+      title: "High Quality Industrial Washing Solutions",
+      desc: "Turnkey car wash systems and vending machines for fuel stations with domestic manufacturing power.",
+      btn1: "Explore Our Products",
+      btn2: "Ask AI Assistant"
+    },
+    sq: {
+      tag: "Lideri i Sektorit që nga 2003",
+      title: "Zgjidhje me Cilësi të Lartë për Larje Industriale",
+      desc: "Sisteme me çelës në dorë dhe automate larjeje për pika karburanti me prodhim cilësor vendas.",
+      btn1: "Shfletoni Produktet tona",
+      btn2: "Pyetni Asistentin IA"
+    }
+  },
+  'slide-2': {
+    tr: {
+      tag: "Jetonlu ve Paralı Sistemler",
+      title: "Self Servis Oto Yıkama ve Köpük Otomatları",
+      desc: "Sahte para algılamalı elektronik mekanizma, paslanmaz çelik kabin ve yüksek verimli İtalyan pompa teknolojisi.",
+      btn1: "Yıkama Otomatları",
+      btn2: "Hızlı Teklif Al"
+    },
+    en: {
+      tag: "Coin & Token Systems",
+      title: "Self-Service Car Wash & Foam Vending Machines",
+      desc: "Electronic anti-counterfeit mechanism, stainless steel cabinet, and high-efficiency Italian pump technology.",
+      btn1: "Vending Washers",
+      btn2: "Get Quick Quote"
+    },
+    sq: {
+      tag: "Sisteme me Zhetona & Para",
+      title: "Automate Larjeje Vetë-Shërbim dhe Shkumë",
+      desc: "Mekanizëm elektronik kundër falsifikimit, trup inoksi dhe pompë italiane me efikasitet të lartë.",
+      btn1: "Makinat me Zhetona",
+      btn2: "Merr Ofertë të Shpejtë"
+    }
+  },
+  'slide-3': {
+    tr: {
+      tag: "Yüksek Emiş Gücü",
+      title: "Jetonlu Çift ve Üç Motorlu Endüstriyel Süpürgeler",
+      desc: "Akaryakıt istasyonlarında sıfır arıza ve maksimum kazanç sağlayan ağır hizmet tipi profesyonel süpürgeler.",
+      btn1: "Süpürgeleri İncele",
+      btn2: "Teknik Özellikler"
+    },
+    en: {
+      tag: "High Suction Power",
+      title: "Coin-Operated Dual & Triple Motor Industrial Vacuums",
+      desc: "Heavy-duty commercial car vacuums ensuring zero-failure and maximum revenue for fuel stations.",
+      btn1: "View Vacuums",
+      btn2: "Specifications"
+    },
+    sq: {
+      tag: "Fuqi e Lartë Thithëse",
+      title: "Fshesa Industriale me Zhetona me 2 & 3 Motorrë",
+      desc: "Fshesa profesionale për pika karburanti me qëndrueshmëri maksimale dhe fitim të lartë.",
+      btn1: "Shiko Fshesat",
+      btn2: "Specifikat Teknike"
+    }
+  },
+  'slide-4': {
+    tr: {
+      tag: "Merkezi Otomasyon",
+      title: "2-12 Peron Merkezi Yıkama & Köpük Sistemleri",
+      desc: "Tüm teknik ekipmanı tek odada toplayarak gürültüsüz, tertemiz ve uzaktan gelir takipli istasyon çözümleri.",
+      btn1: "Merkezi Yıkama",
+      btn2: "Proje Danışmanlığı"
+    },
+    en: {
+      tag: "Central Automation",
+      title: "2-12 Bay Central Wash & Snow Foam Systems",
+      desc: "Centralized machinery room eliminating bay noise with remote revenue tracking for gas stations.",
+      btn1: "Central Wash",
+      btn2: "Project Consulting"
+    },
+    sq: {
+      tag: "Automatizim Qendror",
+      title: "Sisteme Qendrore Larjeje & Shkume 2-12 Pista",
+      desc: "Të gjitha pajisjet teknike në një dhomë të vetme për qetësi dhe menaxhim të të ardhurave.",
+      btn1: "Larje Qendrore",
+      btn2: "Konsulencë Projekti"
+    }
+  },
+  'slide-5': {
+    tr: {
+      tag: "360° Döner Pervaneler",
+      title: "Paslanmaz Çelik Tavan Z-Boom ve Düz Pervaneler",
+      desc: "Hortum aşınmasını ve araç kaportasına çarpmayı engelleyen, ergonomik 360° döner tavan pervaneleri.",
+      btn1: "Pervaneleri Gör",
+      btn2: "Detaylı Bilgi"
+    },
+    en: {
+      tag: "360° Ceiling Booms",
+      title: "Stainless Steel Ceiling Z-Boom & Swivels",
+      desc: "Ergonomic 360° rotating ceiling booms preventing hose wear and vehicle paint scratches.",
+      btn1: "View Booms",
+      btn2: "More Details"
+    },
+    sq: {
+      tag: "Krahë Rrotullues 360°",
+      title: "Krahë Larjeje Tavan Inoks Z-Boom & Të Drejtë",
+      desc: "Krahë rrotullues ergonomikë 360° që parandalojnë konsumimin e zorrës dhe gërvishtjet e automjetit.",
+      btn1: "Shiko Krahët",
+      btn2: "Më Shumë Detaje"
+    }
+  },
+  'slide-6': {
+    tr: {
+      tag: "Yenilikçi Teknoloji",
+      title: "Fırçasız - Temassız - Full Otomatik Lazer Araç Yıkama",
+      desc: "Aracı çizmeden, yüksek basınçlı su ve aktif köpük jetleriyle dakikalar içinde pırıl pırıl yıkama deneyimi.",
+      btn1: "Videoyu İncele",
+      btn2: "Teklif İste"
+    },
+    en: {
+      tag: "Innovative Technology",
+      title: "Touchless & Brushless Automatic Laser Car Wash",
+      desc: "Scratch-free gleaming wash experience in minutes with high pressure water and active foam jets.",
+      btn1: "Watch Video",
+      btn2: "Request Quote"
+    },
+    sq: {
+      tag: "Teknologji Inovative",
+      title: "Larje Automatike me Laser Pa Furça & Pa Prekje",
+      desc: "Përvojë larjeje me shkëlqim brenda pak minutash pa dëmtuar makinën me avionë uji me presion.",
+      btn1: "Shiko Videon",
+      btn2: "Kërko Ofertë"
+    }
+  },
+  'slide-7': {
+    tr: {
+      tag: "Ağır Hizmet Basınç",
+      title: "Sıcak & Soğuk Yüksek Basınçlı Yıkama Makineleri",
+      desc: "150-250 Bar arası ayarlanabilir çalışma basıncı ve termostat kontrollü sıcak su üniteleri.",
+      btn1: "Basınçlı Makineler",
+      btn2: "Bize Ulaşın"
+    },
+    en: {
+      tag: "Heavy Duty Pressure",
+      title: "Hot & Cold High Pressure Washing Units",
+      desc: "150-250 Bar adjustable pressure with thermostat-controlled hot water & steam generators.",
+      btn1: "Pressure Washers",
+      btn2: "Contact Us"
+    },
+    sq: {
+      tag: "Presion i Rëndë Industrial",
+      title: "Makina Larjeje me Presion Ujë i Nxehtë & Ftohtë",
+      desc: "Presion i rregullueshëm 150-250 Bar me ngrohës termostatik uji të nxehtë dhe avull.",
+      btn1: "Makina me Presion",
+      btn2: "Na Kontaktoni"
+    }
+  },
+  'slide-8': {
+    tr: {
+      tag: "2003'ten Beri",
+      title: "Konya Fabrikamızda Yerli Üretim ve İhracat Gücü",
+      desc: "Türkiye geneli 81 ilde yaygın servis ağı ve 25+ ülkeye ihracat başarısıyla güvenin adresi.",
+      btn1: "Kurumsal Bilgi",
+      btn2: "İletişim"
+    },
+    en: {
+      tag: "Since 2003",
+      title: "Domestic Manufacturing Power & Global Export",
+      desc: "Widespread service network across 81 provinces and successful exports to 25+ countries.",
+      btn1: "Corporate Info",
+      btn2: "Contact Us"
+    },
+    sq: {
+      tag: "Që nga 2003",
+      title: "Prodhimi Vendas në Fabrikë & Eksport Global",
+      desc: "Rrjet i gjerë shërbimi në 81 krahina dhe eksport i suksesshëm në mbi 25 shtete.",
+      btn1: "Rreth Kompanisë",
+      btn2: "Kontakt"
+    }
+  }
+};
+
 // Category Translations Mapping
 export const categoryTranslations = {
   'parali-kopuk-yikama': {

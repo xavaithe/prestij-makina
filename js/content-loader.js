@@ -1,4 +1,4 @@
-import { t, getCurrentLang, categoryTranslations, productTranslations, referenceTranslations } from './i18n.js';
+import { t, getCurrentLang, categoryTranslations, productTranslations, referenceTranslations, slideTranslations } from './i18n.js';
 import { initFirebase, fetchContentFromFirebase } from './firebase-config.js';
 
 let siteContent = null;
@@ -171,7 +171,7 @@ function renderNavigation(nav, lang) {
   }).join('');
 }
 
-export function renderHeroSlider(c, lang = getCurrentLang()) {
+export function renderHeroSlider(c, lang = getCurrentLang(), activeIndex = 0) {
   const sliderContainer = document.getElementById('hero-slider');
   if (!sliderContainer) return;
 
@@ -190,14 +190,19 @@ export function renderHeroSlider(c, lang = getCurrentLang()) {
 
   let slidesHtml = slides.map((slide, index) => {
     const bg = slide.backgroundImage || 'assets/upload/slider/1778135979_25974634.jpeg';
-    const tag = lang === 'tr' ? (slide.tag || t('heroTag', lang)) : t('heroTag', lang);
-    const title = lang === 'tr' ? (slide.title || t('heroTitle', lang)) : t('heroTitle', lang);
-    const desc = lang === 'tr' ? (slide.description || t('heroDesc', lang)) : t('heroDesc', lang);
-    const btn1 = lang === 'tr' ? (slide.primaryButtonText || t('heroBtn1', lang)) : t('heroBtn1', lang);
-    const btn2 = lang === 'tr' ? (slide.secondaryButtonText || t('heroBtn2', lang)) : t('heroBtn2', lang);
+    const trans = slideTranslations[slide.id]?.[lang] || null;
+
+    const tag = trans?.tag || (lang === 'tr' ? (slide.tag || t('heroTag', lang)) : t('heroTag', lang));
+    const title = trans?.title || (lang === 'tr' ? (slide.title || t('heroTitle', lang)) : t('heroTitle', lang));
+    const desc = trans?.desc || (lang === 'tr' ? (slide.description || t('heroDesc', lang)) : t('heroDesc', lang));
+    const btn1 = trans?.btn1 || (lang === 'tr' ? (slide.primaryButtonText || t('heroBtn1', lang)) : t('heroBtn1', lang));
+    const btn2 = trans?.btn2 || (lang === 'tr' ? (slide.secondaryButtonText || t('heroBtn2', lang)) : t('heroBtn2', lang));
+    
+    // Check if secondary button should launch AI or link somewhere
+    const isAiBtn = !slide.secondaryButtonLink || slide.secondaryButtonText?.includes('AI') || trans?.btn2?.includes('AI') || trans?.btn2?.includes('IA') || trans?.btn2?.includes('Asistan') || trans?.btn2?.includes('Assistant');
 
     return `
-      <div class="hero-slide ${index === 0 ? 'active' : ''}" data-slide-index="${index}" style="background-image: linear-gradient(rgba(18,20,29,0.75), rgba(18,20,29,0.6)), url('${bg}');">
+      <div class="hero-slide ${index === activeIndex ? 'active' : ''}" data-slide-index="${index}" style="background-image: url('${bg}');">
         <div class="hero-content">
           <span class="hero-tag">${tag}</span>
           <h1 class="hero-title">${title}</h1>
@@ -206,9 +211,15 @@ export function renderHeroSlider(c, lang = getCurrentLang()) {
             <a href="${slide.primaryButtonLink || '#urunler'}" class="btn-primary">
               <i class="fa-solid fa-boxes-stacked"></i> <span>${btn1}</span>
             </a>
-            <button class="btn-outline btn-ai-launch">
-              <i class="fa-solid fa-comment-dots"></i> <span>${btn2}</span>
+            ${isAiBtn ? `
+            <button type="button" class="btn-outline btn-ai-launch">
+              <i class="fa-solid fa-robot"></i> <span>${btn2}</span>
             </button>
+            ` : `
+            <a href="${slide.secondaryButtonLink || '#iletisim'}" class="btn-outline" ${slide.secondaryButtonLink?.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}>
+              <i class="fa-solid fa-arrow-right"></i> <span>${btn2}</span>
+            </a>
+            `}
           </div>
         </div>
       </div>
@@ -218,10 +229,10 @@ export function renderHeroSlider(c, lang = getCurrentLang()) {
   let controlsHtml = '';
   if (slides.length > 1) {
     controlsHtml = `
-      <button class="slider-arrow prev" id="slider-prev"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="slider-arrow next" id="slider-next"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="slider-arrow prev" id="slider-prev" aria-label="Önceki Slayt"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-arrow next" id="slider-next" aria-label="Sonraki Slayt"><i class="fa-solid fa-chevron-right"></i></button>
       <div class="slider-dots" id="slider-dots">
-        ${slides.map((_, idx) => `<span class="dot ${idx === 0 ? 'active' : ''}" data-dot-index="${idx}"></span>`).join('')}
+        ${slides.map((_, idx) => `<span class="dot ${idx === activeIndex ? 'active' : ''}" data-dot-index="${idx}" aria-label="Slayt ${idx + 1}"></span>`).join('')}
       </div>
     `;
   }

@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           applySiteContent(content, selectedLang);
           renderCategoryTabs(selectedLang);
           renderProducts('all', selectedLang);
-          initSliderLogic();
+          initSliderLogic(currentSlideIndex);
         }
       });
     });
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   let sliderIntervalTimer = null;
   let currentSlideIndex = 0;
 
-  const initSliderLogic = () => {
+  const initSliderLogic = (initialIndex = 0) => {
     if (sliderIntervalTimer) clearInterval(sliderIntervalTimer);
 
     const slides = document.querySelectorAll('.hero-slide');
@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const settings = getSliderSettings();
 
     if (slides.length <= 1) return;
+
+    currentSlideIndex = (initialIndex >= 0 && initialIndex < slides.length) ? initialIndex : 0;
 
     const showSlide = (index) => {
       slides.forEach((slide, i) => {
@@ -94,6 +96,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       currentSlideIndex = index;
     };
 
+    showSlide(currentSlideIndex);
+
     const nextSlide = () => {
       const nextIdx = (currentSlideIndex + 1) % slides.length;
       showSlide(nextIdx);
@@ -104,14 +108,25 @@ document.addEventListener('DOMContentLoaded', async () => {
       showSlide(prevIdx);
     };
 
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) {
+      prevBtn.onclick = (e) => {
+        e.preventDefault();
+        prevSlide();
+      };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = (e) => {
+        e.preventDefault();
+        nextSlide();
+      };
+    }
 
     dots.forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        const idx = parseInt(e.target.dataset.dotIndex);
+      dot.onclick = (e) => {
+        e.preventDefault();
+        const idx = parseInt(e.currentTarget.dataset.dotIndex);
         if (!isNaN(idx)) showSlide(idx);
-      });
+      };
     });
 
     if (settings.autoPlay !== false) {
@@ -239,8 +254,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (aiTrigger) aiTrigger.addEventListener('click', openAIChat);
   if (aiClose) aiClose.addEventListener('click', closeAIChat);
 
-  document.querySelectorAll('.btn-ai-launch').forEach(btn => {
-    btn.addEventListener('click', openAIChat);
+  // Delegated AI chat launch trigger for any dynamic buttons across slides and pages
+  document.addEventListener('click', (e) => {
+    const launchBtn = e.target.closest('.btn-ai-launch');
+    if (launchBtn) {
+      e.preventDefault();
+      openAIChat();
+    }
   });
 
   if (aiClear) {
